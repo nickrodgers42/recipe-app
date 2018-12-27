@@ -14,7 +14,7 @@ import {
 } from '@material-ui/icons';
 import "typeface-roboto";
 import PropTypes from "prop-types";
-import MediaQuery from 'react-responsive';
+// import MediaQuery from 'react-responsive';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import theme from '../../appTheme.jsx';
 import { fade } from '@material-ui/core/styles/colorManipulator';

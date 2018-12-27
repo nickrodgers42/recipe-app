@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
+let Schema = mongoose.Schema;
+// let uniqueValidator = require('mongoose-unique-validator');
 
-let uniqueValidator = require('mongoose-unique-validator');
-
-let RecipeSchema = new mongoose.Schema({
+let RecipeSchema = new Schema({
     title: { type: String, required: true },
     creationDate: { type: Date, default: Date.now },
     lastEditDate: { type: Date, default: Date.now }, 
-    author: mongoose.SchemaType.ObjectId, ref: 'User',
+    // author: mongoose.SchemaType.ObjectId, ref: 'User',
     yield: Number,
     description: { type: String },
     ingredients: { type: [String], required: true },
@@ -14,7 +14,7 @@ let RecipeSchema = new mongoose.Schema({
     // TODO
     // photos: { type: [mongoose.SchemaType.ObjectId], ref: 'Photo' },
     notes: { type: [String] },
-    reviews: { type: [mongoose.SchemaType.ObjectId], ref: 'Review'},
+    // reviews: { type: [mongoose.SchemaType.ObjectId], ref: 'Review'},
     // TODO
     // likes: { type}
     public: { type: Boolean, default: true},
